@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.phone_container{
+}
+.phone_input{
+    background-color: transparent;
+    background-color: aqua;
+    color: aqua;
+    border-radius: 20px;
+
+}
+

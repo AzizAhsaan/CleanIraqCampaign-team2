@@ -1,0 +1,282 @@
+.img{
+    --s: 15px; /* control the size */
+    padding: var(--s);
+    border: calc(2*var(--s)) solid #0000;
+    outline: 2.5px solid #3FACE3;
+    outline-offset: calc(-0.9*var(--s));
+    background: conic-gradient(from 90deg at 2.5px 2.5px,#0000 25%,#3FACE3 0);
+  }
+  .curved {
+    position: relative;
+    background: #436a91;
+    height: 25rem;
+  }
+  
+  .curved::after {
+    content: '';
+    border-top-left-radius: 100% 60%;
+    border-top-right-radius: 100% 60%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fffdfa;
+    height: 10%;
+  }
+  .tv {
+
+    box-shadow: 20px 20px rgba(129, 161, 198, 0.506);
+    transition: all .4s ease;
+  }
+  .tv:hover {
+    box-shadow: 10px 10px rgba(153, 181, 209, 0.635);
+  }
+  .tv1 {
+
+    box-shadow: 11px 11px  rgba(2, 83, 176, 0.577);
+    transition: all .4s ease;
+  }
+  .tv1:hover {
+    box-shadow: 9px 9px rgba(38, 80, 135, 0.629);
+  }
+
+.linecontainer{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.svg{
+    display: inline-block;
+    height: 100%;
+}
+
+.container{
+  padding: 2rem;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.topsection{
+  text-align: center;
+  padding: 4rem 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.timeline{
+  position: relative;
+  min-height: 150px;
+}
+.line{
+  position: absolute;
+  z-index: 2;
+  left: calc(50% - 1px);
+  width: 3px;
+  top: -50px;
+  bottom: -50px;
+  background-color: black;
+}
+.line:before,
+.line:after{
+  position: absolute;
+  display: block;
+  content: '';
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  background-color: #436a91;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.line:after{
+  bottom: 0;
+}
+.section{
+  display: flex;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 600ms ease;
+  position: relative;
+  z-index: 1;
+  margin: 50px 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  align-items: center;
+  min-height: 300px;
+}
+.section:nth-child(even){
+  flex-direction: row-reverse;
+  transform: translateX(100%);
+}
+.bead{
+  position: absolute;
+  display: block;
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  background-color: black;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+}
+.content{
+  width: calc(50% - 7rem);
+}
+.showme:nth-child(n){
+  transform: none;
+  opacity: 1;
+}
+.h1{
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-right: 7rem;
+  box-shadow: 10px 10px 10px #666;
+ 
+  
+}
+
+.slide {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 7px #666;
+  width: 100%;
+  height: 100%;
+}
+
+.slidehidden {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  filter: drop-shadow(0px 0px 8px #555);
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.arrowleft {
+  left: 1rem;
+}
+
+.arrowright {
+  right: 1rem;
+}
+
+.indicators {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.indicator {
+  background-color: white;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 5px #555;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+.indicatorinactive {
+  background-color: grey;
+}
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.fadein {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadeout {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+@media only screen and (max-width: 770px) {
+  .arrow {
+    position: absolute;
+    filter: drop-shadow(0px 0px 8px #555);
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+    
+  }
+  .arrowleft {
+    left: 0.2rem;
+    top:5rem
+  }
+  
+  .arrowright {
+    right: 0.2rem;
+    top:5rem
+  }
+  
+.indicator {
+  background-color: white;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 5px #555;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+}
+@media only screen and (max-width: 330px) {
+  .arrow {
+    position: absolute;
+    filter: drop-shadow(0px 0px 8px #555);
+    width: 1rem;
+    height: 1rem;
+    color: white;
+    
+  }
+  .arrowleft {
+    left: 0.2rem;
+    top:2.9rem
+  }
+  
+  .arrowright {
+    right: 0.2rem;
+    top:2.9rem
+  }
+  
+.indicator {
+  background-color: white;
+  height: 0.3rem;
+  width: 0.3rem;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 5px #555;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+}
+.video{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
